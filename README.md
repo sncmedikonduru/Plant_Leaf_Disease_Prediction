@@ -9,7 +9,7 @@ The agricultural sector frequently confronts the challenge of countless plant di
 ## OBJECTIVE
 This project is committed to leveraging the potential of Vision Transformers (ViT’s) and Convolutional Neural Networks (CNNs) to transform plant disease detection and classification. The primary objectives are centred around the capability of these models to detect and define unhealthy regions within plant leaves with unprecedented precision. By focusing on extracting and analysing texture features, the models can differentiate between healthy and diseased tissue, recognizing patterns that are often invisible to the naked eye. Ultimately, the goal is to create a scalable and efficient tool that can be deployed across different regions and plant varieties, making it a solution for plant disease management.
 
-## BENEFITES
+## BENEFITS
 
 Adopting advanced technologies like Vision Transformers (ViTs) and Convolutional Neural Networks (CNNs) in plant disease detection brings many valuable advantages like improved accuracy and precision, resource optimization, and others. The reason is because, diagnosis(treatments) can be applied accurately, there’s less waste of water, pesticides, and other resources. This not only cuts the cost but also lessens the economic footprints of farming practices. 
 By this, farmers can maintain steady income because they are able to meet market demand consistently. This stability is vital for the livelihoods of farmers and the overall economy of rural areas.
