@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Leaf Disease Prediction</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav>
+        <ul>    <header>
+            <li><a href="#ProblemStatement">Problem Statement</a></li>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#objective">Objective</a></li>
+            <li><a href="#Benefits">Benefits</a></li>
+            <li><a href="#data source">Data Source</a></li>
+            <li><a href="#methodology">Methodology</a></li>
+            <li><a href="#results">Results</a></li>
+            <li><a href="#conclusion">Conclusion and Future Work</a></li>
+        </ul>
+    </nav>
+    <h1>Plant Leaf Disease Prediction</h1>
+    <section id="ProblemStatement">
+        <h2>Problem Statement</h2>
+        <p>In the hunt of advancing agricultural technologies and ensuring food security, the ability to predict plant diseases through early intervention is a paramount. Our project utilizes a substantial dataset of approximately 80,000 classified plant leaf image data, consisting of both healthy and diseased specimens across various species. The primary goal is to benchmark the effectiveness of ViT against traditional CNN in disease identification. This comparative analysis uncovers a specific scenario where ViT excels (or) may require further optimization to enhance their utility in agricultural applications.</p>
+    </section>
+    <section id="introduction">
+        <h2>Introduction</h2>
+        <p>The agricultural sector frequently confronts the challenge of countless plant diseases, which can lead to significant economic losses globally. Early and accurate diagnosis of these afflictions is crucial in mitigating their impact. This necessitates the integration of advanced algorithms in plant pathology. Vision transformers (ViTs) and Convolutional Neural Networks (CNNs) are at the forefront of this technological advancement. These models offer new avenues for identifying disease patterns in plant leaves, promising to revolutionize agricultural practices by enhancing disease detection and management strategies.</p>
+    </section>
+    <section id="objective">
+        <h2>Objective</h2>
+        <p>This project is committed to leveraging the potential of Vision Transformers (ViT’s) and Convolutional Neural Networks (CNNs) to transform plant disease detection and classification. The primary objectives are centred around the capability of these models to detect and define unhealthy regions within plant leaves with unprecedented precision. By focusing on extracting and analysing texture features, the models can differentiate between healthy and diseased tissue, recognizing patterns that are often invisible to the naked eye. Ultimately, the goal is to create a scalable and efficient tool that can be deployed across different regions and plant varieties, making it a solution for plant disease management.</p>
+    </section>
+    <section id="Benefits">
+        <h2>Benefits</h2>
+        <p>Adopting advanced technologies like Vision Transformers (ViTs) and Convolutional Neural Networks (CNNs) in plant disease detection brings many valuable advantages like improved accuracy and precision, resource optimization, and others. The reason is because, diagnosis(treatments) can be applied accurately, there’s less waste of water, pesticides, and other resources. This not only cuts the cost but also lessens the economic footprints of farming practices. 
+            By this, farmers can maintain steady income because they are able to meet market demand consistently. This stability is vital for the livelihoods of farmers and the overall economy of rural areas. Overall, the use of Vision Transformers and CNNs in detecting plant diseases is about more than just identifying sick plants—it’s about making agriculture more efficient, sustainable, and economically stable.</p>
+    </section>
+    
+
+    <section id="data source">
+        <h2>Data Source</h2>
+        <p>The project encompasses a comprehensive approach to tackling plant leaf classification using cutting-edge techniques in computer vision. We have amassed an extensive dataset comprising 80,000 images, carefully classified into 10 healthy and 25 diseased categories from the Kaggle. This meticulous curation ensures a robust foundation for subsequent analysis and model development.</p>
+    </section>
+
+    <section id="methodology">
+        <h2>Methodology</h2>
+        <h3>Data Collection</h3>
+        <p>For this project, we collected approximately 80,000 Classified Plant Leaf Image data having both healthy and diseased classes which was collected from kaggle. Kaggle is a online platform which is available directly to the public to download various types of data. </p>
+        <h3>Dataset Exploration</h3>
+         <div style="display: flex; justify-content: space-around;">
+        <div>
+            <img src="images/DataExploration.png" alt="Data Exploration">
+        </div>
+        <div>
+            <img src="images/NumberOfClasses.jpeg" alt="Total Number Of Classes">
+        </div>
+    </div>
+        <h3>Data Preprocessing</h3>
+        <p>Data pre-processing plays a pivotal role in refining the raw dataset, ensuring it's primed for effective model training. Techniques such as image normalization, resizing, and augmentation are likely employed to enhance model generalization and mitigate issues like overfitting. By meticulously preparing the data, we lay the groundwork for the subsequent stages of  project, setting the stage for robust model implementation.</p>
+
+        <h3>Exploratory Data Analysis</h3>
+        <div class="plots">
+
+            <h4>Training Data</h4>
+            <div style="display: flex; justify-content: space-around;">
+                <div>
+                    <img src="images/TrainData.png" alt="Training Dataset" width="1200" height="599">
+                </div>
+            </div>
+            <p></p>
+
+            <h4>Validation Data</h4>
+            <div style="display: flex; justify-content: space-around;">
+                <div>
+                    <img src="images/ValidationData.png" alt="Validation Dataset"  width="1200" height="599">
+                </div>
+            </div>
+            <h4>Testing Data</h4>
+            <div style="display: flex; justify-content: space-around;">
+                <div>
+                    <img src="images/TestingData.png" alt="Testing Dataset" width="1200" height="599">
+                </div>
+            </div>            
+            <p></p>
+            <h3>Model Implementation</h3>
+            <p>We implemented CNN architecture and Transformer architecture. In CNN, we implemented models include Resnet50, Desnet169 and Efficientnet B3. In transformer architecture, we implemeted vision transformers. We compared both the architectures and found a robust model. To Overcome the mitigation problem, we implemeted ensemble methods to acheive high performance.</p>
+            <h3>Model Evaluation</h3>
+            <p>We evaluated a models on the bases of evaluation metrics like precision, recall, F1-score and Support. We generated a classification report.</p>
+    </section>
+
+    <section id="results">
+        <h2>Results</h2>
+        <h3>Convolution Neural Networks & Vision Transformers</h3>
+        <p>
+        <h4>Performance Analysis of Convolutional Neural Networks Architecture Over Transformer Architecture for Plant Leaf Disease Detection</h4>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+
+            <!-- Top two plots -->
+            <div style="display: flex; justify-content: space-around; width: 100%;">
+                <div>
+                    <h3>Resnet50</h3>
+                    <img src="images/Resnet_Accuracy.jpeg" alt="Accuracy Plot for Resnet50" width="522" height="412">
+                </div>
+                <div>
+                    <h3>Desnet169</h3>
+                    <img src="images/Desnet169.jpeg" alt="Accuracy Plot for Desnet169" width="522" height="412">
+                </div>
+            </div>
+
+            <!-- Bottom two plots -->
+            <div style="display: flex; justify-content: space-around; width: 100%;">
+                <div>
+                    <h3>Efficientnet B3</h3>
+                    <img src="images/EfficientnetB3_Accuracy.jpeg" alt="Accuracy Plot for Efficientnet B3" width="522" height="412">
+                </div>
+                <div>
+                    <h3>Vision Transformers</h3>
+                    <img src="images/VT_accuracy.jpeg" alt="Accuracy Plot for Vision Transformers" width="522" height="412">
+                </div>
+            </div>
+
+        </div>
+
+        </p>
+        <h3>Results Comparision</h3>
+        <p></p>
+        <title>Results Comparison</title>
+        <style>
+            .table-container {
+                display: inline-block;
+                vertical-align: top;
+                margin-right: 20px;
+            }
+        
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+        
+            th, td {
+                padding: 5px;
+                text-align: left;
+            }
+        
+            th {
+                background-color: #4CAF50;
+                color: white;
+            }
+        
+            .accuracy {
+                text-align: center;
+            }
+        </style>
+        
+        <body>
+        
+            <div class="table-container">
+                <h3> Model Performance</h3>
+                <table>
+                    <tr>
+                        <th>Model</th>
+                        <th class="accuracy">Training accuracy(%)</th>
+                        <th class="accuracy">Validation accuracy(%)</th>
+                        <th class="accuracy">Test accuracy(%)</th>
+                    </tr>
+                    <tr>
+                        <td>EfficientNets B3</td>
+                        <td class="accuracy">98.98</td>
+                        <td class="accuracy">98.43</td>
+                        <td class="accuracy">98</td>
+                    </tr>
+                    <tr>
+                        <td>DenseNet 169</td>
+                        <td class="accuracy">96.60</td>
+                        <td class="accuracy">96.38</td>
+                        <td class="accuracy">93.49</td>
+                    </tr>
+                    <tr>
+                        <td>ResNet 50</td>
+                        <td class="accuracy">94.75</td>
+                        <td class="accuracy">94.56</td>
+                        <td class="accuracy">93.28</td>
+                    </tr>
+                    <tr>
+                        <td>Vision Transformers (ViT)</td>
+                        <td class="accuracy">94.24</td>
+                        <td class="accuracy">93.98</td>
+                        <td class="accuracy">94.39</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="table-container">
+                <h3>Class Specific Ensemble Method Precision</h3>
+                <table>
+                    <tr>
+                        <th>Class</th>
+                        <th class="accuracy">ResNet-50</th>
+                        <th class="accuracy">DenseNet-169</th>
+                        <th class="accuracy">EfficientNets B3</th>
+                        <th class="accuracy">Vision Transformers</th>
+                        <th class="accuracy">Ensemble Methods</th>
+                    </tr>
+                    <tr>
+                        <td>Apple_Scab</td>
+                        <td class="accuracy">0.82</td>
+                        <td class="accuracy">0.98</td>
+                        <td class="accuracy">0.99</td>
+                        <td class="accuracy">0.84</td>
+                        <td class="accuracy">1.0</td>
+                    </tr>
+                    <tr>
+                        <td>Corn_grayleafspot</td>
+                        <td class="accuracy">0.94</td>
+                        <td class="accuracy">0.88</td>
+                        <td class="accuracy">0.93</td>
+                        <td class="accuracy">0.95</td>
+                        <td class="accuracy">0.99</td>
+                    </tr>
+                    <tr>
+                        <td>Grape_healthy</td>
+                        <td class="accuracy">0.82</td>
+                        <td class="accuracy">0.99</td>
+                        <td class="accuracy">1.00</td>
+                        <td class="accuracy">0.87</td>
+                        <td class="accuracy">1.00</td>
+                    </tr>
+                    <tr>
+                        <td>Soybean_caterpillar</td>
+                        <td class="accuracy">0.92</td>
+                        <td class="accuracy">0.92</td>
+                        <td class="accuracy">0.92</td>
+                        <td class="accuracy">0.93</td>
+                        <td class="accuracy">0.93</td>
+                    </tr>
+                    <tr>
+                        <td>Tomato_lateblight</td>
+                        <td class="accuracy">0.89</td>
+                        <td class="accuracy">0.71</td>
+                        <td class="accuracy">0.96</td>
+                        <td class="accuracy">0.82</td>
+                        <td class="accuracy">0.96</td>
+                    </tr>
+                    <tr>
+                        <td>Tomato_septoria_leaf_spot</td>
+                        <td class="accuracy">0.66</td>
+                        <td class="accuracy">0.79</td>
+                        <td class="accuracy">0.96</td>
+                        <td class="accuracy">0.71</td>
+                        <td class="accuracy">0.99</td>
+                    </tr>
+                    <tr>
+                        <td>Tomato_healthy</td>
+                        <td class="accuracy">0.72</td>
+                        <td class="accuracy">0.85</td>
+                        <td class="accuracy">0.79</td>
+                        <td class="accuracy">0.76</td>
+                        <td class="accuracy">1.00</td>
+                    </tr>
+                </table>
+            </div>
+            <p>Out of all other models, the efficient B3 in CNN architecture shows high performance and with the help of ensemble method we achieved 99% test accuracy.</p>
+    </section>
+
+    <section id="conclusion">
+        <h2>Conclusion and Future Work</h2>
+        <h3>Conclusion</h3>
+        <p>I. EfficientNet B3 Outperforms.</p>
+        <p>II. DenseNet169 shows strong performance.</p>
+        <p>III. Vision Transformers need further optimization.</p>
+        </p>
+        <h3>Future Work</h3>
+        <p>I. Vision transformers fine tuning.</p>
+        <p>II. Data dependency for VisionTransformers(ViT).</p>
+        <p>III. Self-attention mechanism in ViT.</p>
+        </p>
+
+    </section>
+
+    <footer>
+        <p>© 2024 Plant Leaf Disease Prediction Group Project</p>
+        <p>Contributors:</p>
+        <ul>
+            <li>
+                <a href="">Tejaswini Sai Kumar</a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/sai-medikonduru">Sai Nath Chowdary Medikonduru</a>
+            </li>
+        </ul>
+        <p>Code available on GitHub:</p>
+        <a href="https://github.com/sncmedikonduru/Plant_Leaf_Disease_Prediction">Project GitHub Repository</a>
+    </footer>
+
+</body>
+
+</html>
